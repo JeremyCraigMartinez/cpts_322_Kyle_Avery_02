@@ -1,0 +1,65 @@
+﻿<controls:MetroWindow x:Class="cpts_322_Kyle_Avery_02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="MainWindow" Height="348" Width="525" Icon="logo.png">
+    <controls:MetroWindow.WindowCommands>
+        <controls:WindowCommands>
+            <Button x:Name="b_open" Click="b_click">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock>Open</TextBlock>
+                    </ToolTip>
+                </Button.ToolTip>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="25" Height="20">
+                        <Rectangle.Resources>
+                            <SolidColorBrush x:Key="BlackBrush" Color="White" />
+                        </Rectangle.Resources>
+                        <Rectangle.Fill>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_folder_open}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </StackPanel>
+            </Button>
+            <Button x:Name="b_save" Click="b_click">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock>Save</TextBlock>
+                    </ToolTip>
+                </Button.ToolTip>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20" Height="20">
+                        <Rectangle.Resources>
+                            <SolidColorBrush x:Key="BlackBrush" Color="White" />
+                        </Rectangle.Resources>
+                        <Rectangle.Fill>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_disk}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </StackPanel>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.WindowCommands>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="184*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="l_output" Text="" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Stretch" Grid.Column="1" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="4" AcceptsReturn="True"/>
+
+        <Button x:Name="b_clear" Content="Clear" Grid.Column="4" HorizontalAlignment="Stretch" Margin="0,2,0,0" VerticalAlignment="Stretch" Grid.Row="1" Click="b_clear_Click"/>
+        <Button Content="Fibbonacci (100)" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0,2,0,0" Grid.Row="1" VerticalAlignment="Stretch" />
+        <Button Content="Fibbonacci (50)" Grid.Column="2" HorizontalAlignment="Stretch" Margin="0,2,0,0" Grid.Row="1" VerticalAlignment="Stretch" />
+    </Grid>
+</controls:MetroWindow>
