@@ -102,10 +102,23 @@ namespace cpts_322_Kyle_Avery_02
             int line = 0;
             while (sr.Peek() != -1)
             {
-                l_output.Text += String.Format("{0}:\t", ++line);
+                l_output.Text += String.Format("{0}:\t", line);
                 l_output.Text += sr.ReadLine();
                 l_output.Text += System.Environment.NewLine;
+                ++line;
             }
+        }
+
+        private void b_fib_50_Click(object sender, RoutedEventArgs e)
+        {
+            FibTextReader temp = new FibTextReader(50);
+            load_text(temp);
+        }
+
+        private void b_fib_100_Click(object sender, RoutedEventArgs e)
+        {
+            FibTextReader temp = new FibTextReader(100); ;
+            load_text(temp);
         }
     }
     
