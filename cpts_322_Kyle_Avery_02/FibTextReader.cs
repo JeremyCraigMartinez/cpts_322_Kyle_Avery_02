@@ -79,7 +79,7 @@ namespace cpts_322_Kyle_Avery_02
         //}
         public override int Peek()
         {
-            if (fib_location == max_fib)
+            if (fib_location > max_fib)
                 return -1;
             return 0;
 
