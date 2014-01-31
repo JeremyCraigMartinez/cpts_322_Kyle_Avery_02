@@ -102,7 +102,7 @@ namespace cpts_322_Kyle_Avery_02
             int line = 0;
             while (sr.Peek() != -1)
             {
-                l_output.Text += String.Format("{0}: ", ++line);
+                l_output.Text += String.Format("{0}:\t", ++line);
                 l_output.Text += sr.ReadLine();
                 l_output.Text += System.Environment.NewLine;
             }
